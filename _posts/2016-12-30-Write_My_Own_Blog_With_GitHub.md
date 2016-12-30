@@ -105,7 +105,7 @@ title: 我的Blog
 
 ```
 
-其中，`{% for post in site.posts %}`，表示对所有帖子进行遍历。Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。
+Liquid模板语言中，输出内容使用两层大括号，单纯的命令使用一层大括号。
 
 4. 发布到github上
 在github上新建一个仓库，名字为DManTalk，然后将本地的内容push到github仓库中
