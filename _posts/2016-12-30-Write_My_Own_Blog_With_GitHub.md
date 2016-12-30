@@ -71,7 +71,7 @@ baseurl: /DManTalk
 </html>
 ```
 
-Jekyll使用Liquid模板语言，{{ page.title }}表示文章标题，{{ content }}表示文章内容，详细信息请参考[官方文档](http://jekyllrb.com/docs/variables/)。
+Jekyll使用Liquid模板语言，`{{ page.title }}`表示文章标题，`{{ content }}`表示文章内容，详细信息请参考[官方文档](http://jekyllrb.com/docs/variables/)。
 
 _posts目录就是用来存放所有日志文章的，文件名必须为"年-月-日-文章标题.后缀名"的格式。
 每篇文章的头部，必须有一个[yaml文件头](http://jekyllrb.com/docs/frontmatter/)，用来设置这篇文章的元数据信息：用"---"标记开始和结束，中间写入一个元数据信息。
@@ -89,21 +89,23 @@ title: 使用GitHub搭建自己的blog
 在根目录中，index.html文件即为blog的首页，填入以下内容：
 
 ```
+
 ---
 layout: default
 title: 我的Blog
 ---
 
 <h2>{{ page.title }}</h2>
-<p>最新文章</p>
+<p>文章列表</p>
 <ul>
 	{% for post in site.posts %}
 		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 　　{% endfor %}
 </ul>
+
 ```
 
-其中，{% for post in site.posts %}，表示对所有帖子进行遍历。Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。
+其中，`{% for post in site.posts %}`，表示对所有帖子进行遍历。Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。
 
 4. 发布到github上
 在github上新建一个仓库，名字为DManTalk，然后将本地的内容push到github仓库中
