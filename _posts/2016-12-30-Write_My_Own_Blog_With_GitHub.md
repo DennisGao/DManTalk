@@ -1,4 +1,4 @@
----
+就是用来存放所有日志文章的，文件---
 layout: default
 title: 使用GitHub搭建自己的博客
 ---
@@ -73,7 +73,7 @@ baseurl: /DManTalk
 
 Jekyll使用Liquid模板语言，`{{ page.title }}`表示文章标题，`{{ content }}`表示文章内容，详细信息请参考[官方文档](http://jekyllrb.com/docs/variables/)。
 
-_posts目录就是用来存放所有日志文章的，文件名必须为"年-月-日-文章标题.后缀名"的格式。
+_posts目录就是用来存放所有日志文章的，文件名必须为 `年-月-日-文章标题.后缀名` 的格式。
 每篇文章的头部，必须有一个[yaml文件头](http://jekyllrb.com/docs/frontmatter/)，用来设置这篇文章的元数据信息：用"---"标记开始和结束，中间写入一个元数据信息。
 	1. "layout:default"，表示该文章的模板使用_layouts目录下的default.html文件；
 	2. "title: 你好，世界"，表示该文章的标题是"你好，世界"。如果不设置这个值，默认使用嵌入文件名的标题，即"hello world"。
